@@ -8,5 +8,5 @@
 * Descargar dependencias: `make deps`
 * Ejecutar tests: `make test`
 * Empaquetar la aplicación: `make build`
-* Desplegar la aplicación: `make deploy`
+* Desplegar la aplicación: `make & make deploy`
 * Parar la aplicación: `make stop`
