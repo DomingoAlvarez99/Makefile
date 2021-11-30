@@ -9,7 +9,8 @@
 * Ejecuta los tests: `> make test`
 * Paquetiza la aplicación: `> make build`
 * Mueve el binario al path correspondiente para poder ejecutarlo: `> make install`
-* Ejecuta la aplicación: `> make & make deploy`
+* Despliega la aplicación.: `> make & make all`
+* Inicia la aplicación: `> make start`
 * Para la aplicación: `> make stop`
 
 ## Datos a tener en cuenta sobre Makefile
