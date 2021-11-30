@@ -2,9 +2,6 @@
 
 function print_deps_targets() {
 	local deps_targets_arr=("$@")
-	if [ -z "$deps_targets_arr" ]; then
-		return 0
-	fi
 
 	if [ ${#deps_targets_arr[@]} -eq 0 ]; then
 		return 0
