@@ -1,5 +1,8 @@
 # Makefile
 
+## Tecnologías necesarias
+`Java` `Maven`
+
 ## Targets
 * Mostrar ayuda `make help`
 * Descargar dependencias: `make deps`
