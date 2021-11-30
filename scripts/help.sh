@@ -1,8 +1,7 @@
 #!/bin/bash
 
 function print_deps_targets() {
-	local deps_targets_arr=$1
-
+	local deps_targets_arr=("$@")
 	if [ -z "$deps_targets_arr" ]; then
 		return 0
 	fi
@@ -36,9 +35,9 @@ function print_targets() {
         	echo -e "  $ORANGE make $target_name"
 
        		local deps_targets_str=$(echo "$target" | cut -d ":" -f 2 | cut -d "#" -f 1)
-        	local deps_targets_arr=(`echo $deps_targets_str | tr ' ' ' '`)
+        	IFS=' ' read -ra deps_targets_arr <<< "$deps_targets_str"
 		
-		print_deps_targets "$deps_targets_arr"
+		print_deps_targets "${deps_targets_arr[@]}"
 	done
 }
 
