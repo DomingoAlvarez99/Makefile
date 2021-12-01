@@ -19,7 +19,7 @@ function print_deps_targets() {
 function print_targets() {
 	local makefile_path=$1
 
-	echo -ne "Help for $makefile_path\n"
+	echo -ne "${WHITE}Help for $makefile_path\n"
 
 	local targets_str=`cat "$makefile_path" | egrep -i '^[a-zA-Z_-]+:.+##.+$' | tr '\n' ';'`
 	IFS=';' read -ra targets_arr <<< "$targets_str"
